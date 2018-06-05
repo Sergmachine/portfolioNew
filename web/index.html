@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="materialize/css/materialize.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+   
+</head>
+<body>
+  
+    <nav>
+        <div class="nav-wrapper lime accent-4">
+          <a href="#" class="brand-logo">Чат</a>
+           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+         <ul class="side-nav lime accent-4" id="mobile-demo">
+        <li><a href="registration.html" class="white-text">Зарегистрироваться<i class="material-icons right">person_add</i></a></li>
+        <li><a href="ads.html" class="white-text">Объявления<i class="material-icons right">dashboard</i></a></li>
+        <li><a href="index.html" class="white-text">Чат<i class="material-icons right">insert_comment</i></a></li>
+        <li><a href="capital.html" class="white-text">Фонд дома<i class="material-icons right">attach_money</i></a></li>
+        <li><a href="oplat.html" class="white-text">Оплата<i class="material-icons right">check_box</i></a></li>
+        <li><a href="cameraoff.html" class="white-text">Видеонаблюдение<i class="material-icons right">videocam</i></a></li>
+        <li><a href="specialcall.html" class="white-text">Вызов аварийных служб<i class="material-icons right">phonelink_ring</i></a></li>
+        <li><a href="changenick.html" class="white-text">Cменить имя<i class="material-icons right">format_color_text</i></a></li>
+        <li><a href="settings.html" class="white-text">Настройки<i class="material-icons right">settings</i></a></li>
+        <li><a href="online.html" class="white-text">Онлайн собрание<i class="material-icons right">account_circle</i></a></li>
+         <li><a href="up.html" class="white-text">Личный кабинет<i class="material-icons right">assignment_ind</i></a></li>
+      </ul>
+        </div>
+    </nav>
+    <div class="txtp">
+        <div>
+           <div class="pers">кв.155 
+               <div class="u_text">Здравствуйте!</div>
+               18:09
+           </div>
+            <div class="pers">кв.42 
+               <div class="u_text">Прив</div>
+               18:10
+           </div>
+           <div class="pers">кв.155 
+              <div class="u_text">Когда собрание?</div>
+               18:10
+           </div>
+           <div class="pers">кв.95 
+               <div class="u_text">Смотрите доску</div>
+               18:17
+           </div>
+            
+        </div>
+    </div>
+    <div class="row pos">
+           <div class="col s11">
+               <input type="text" id="name" class="inp_txt">
+           </div>
+            <div class="col s1">
+                <button class="btn"><i class="material-icons ">send</i></button>
+            </div>
+    </div>
+     
+    
+     <ul class="side-nav purple lighten-3" id="mobile-demo">
+        <li><a href="registration.html" class="white-text">Зарегистрироваться<i class="material-icons right">person_add</i></a></li>
+        <li><a href="login.html" class="white-text">Войти<i class="material-icons right">person</i></a></li>
+        <li><a href="#" class="white-text">Сервисы<i class="material-icons right">dashboard</i></a></li>
+        <li><a href="#" class="white-text">Оставить замечание<i class="material-icons right">insert_comment</i></a></li>
+      </ul>
+        
+    <script type="text/javascript" src="materialize/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="jsdb/db.js"></script>
+    <script type="text/javascript">
+        var inp = document.querySelector(".inp_txt");
+        var txtp = document.querySelector(".txtp");
+        var btn = document.querySelector(".btn");
+        btn.onclick = function(){
+            if(inp.value != ''){
+                 var fr = document.createElement('div');
+                txtp.appendChild(fr);
+                fr.classList.add("mess");
+                fr.classList.add("right-align");
+                
+                var div = document.createElement('div');
+                fr.appendChild(div);
+                div.classList.add("mess");
+                div.classList.add("right-align");
+                div.innerHTML = inp.value;
+                var time = document.createElement('div');
+                fr.appendChild(time);
+                time.classList.add("right-align");
+                time.innerHTML = "18:30";
+                inp.value = '';
+            }
+            else{
+            }
+        }
+            
+        $(document).ready(function(){
+            $(".button-collapse").sideNav();
+            $(".collapsible").collapsible();
+        });
+    </script>
+</body>
+</html>

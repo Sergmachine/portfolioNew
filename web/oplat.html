@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="materialize/css/materialize.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+   
+</head>
+<body>
+  
+    <nav>
+        <div class="nav-wrapper lime accent-4">
+          <a href="#" class="brand-logo">Оплата</a>
+           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+         <ul class="side-nav lime accent-4" id="mobile-demo">
+    <li><a href="registration.html" class="white-text">Зарегистрироваться<i class="material-icons right">person_add</i></a></li>
+        <li><a href="ads.html" class="white-text">Объявления<i class="material-icons right">dashboard</i></a></li>
+        <li><a href="index.html" class="white-text">Чат<i class="material-icons right">insert_comment</i></a></li>
+        <li><a href="capital.html" class="white-text">Фонд дома<i class="material-icons right">attach_money</i></a></li>
+        <li><a href="oplat.html" class="white-text">Оплата<i class="material-icons right">check_box</i></a></li>
+        <li><a href="cameraoff.html" class="white-text">Видеонаблюдение<i class="material-icons right">videocam</i></a></li>
+        <li><a href="specialcall.html" class="white-text">Вызов аварийных служб<i class="material-icons right">phonelink_ring</i></a></li>
+        <li><a href="changenick.html" class="white-text">Cменить имя<i class="material-icons right">format_color_text</i></a></li>
+        <li><a href="settings.html" class="white-text">Настройки<i class="material-icons right">settings</i></a></li>
+        <li><a href="online.html" class="white-text">Онлайн собрание<i class="material-icons right">account_circle</i></a></li>
+        <li><a href="up.html" class="white-text">Личный кабинет<i class="material-icons right">assignment_ind</i></a></li>
+      </ul>
+        </div>
+    </nav>
+    
+        <div class="container">
+            <h5>Нужно оплатить:</h5>
+            <div class="col s12 center-align blue lighten-2 raz">
+            1990руб
+            </div>
+            <p class="s6 o_p yellow lighten-2">оплатить до: 21.12.2017</p>
+        </div>
+        <div class="container">   
+            <ul id="dropdown2" class="dropdown-content">
+            <li><a href="#!">ЖКУ</a></li>
+            <li><a href="#!">Электричество</a></li>
+            <li><a href="#!">Вода</a></li>
+             <li><a href="#!">Газ</a></li>
+        </ul>
+        <a class="btn dropdown-button" href="#!" data-activates="dropdown2">Выберите услугу<i class="material-icons right">arrow_drop_down</i></a>
+        </div>
+        
+        
+        
+       <div class="row">
+        <div class="input-field col s12 l1">
+          <input id="num" type="password" class="validate">
+          <label for="num">Номер на обороте карты</label>
+        </div>
+      </div>     
+      <div class="row">
+        <div class="input-field col s12 l">
+          <input id="password" type="password" class="validate">
+          <label for="password">Пароль</label>
+        </div>
+      </div>
+       
+        <button class="btn waves-effect waves-light pos_bo" type="submit" name="action">Оплатить<i class="material-icons right ">send</i>
+        </button>
+    
+    <script type="text/javascript" src="materialize/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="jsdb/db.js"></script>
+    <script type="text/javascript">
+        var l=document.querySelector(".l");
+        var l1=document.querySelector(".l1");
+        
+        
+        $(document).ready(function(){
+            $(".button-collapse").sideNav();
+            $(".collapsible").collapsible();
+        });
+    </script>
+</body>
+</html>
